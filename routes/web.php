@@ -12,14 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
 
-
-Route::get('/news/', function () {
-    return view('news');
+Route::get('/{page}', function ($page) {
+    return view($page);
 });
 
-Route::get('/about/', function () {
-    return view('news');
-});
