@@ -14,7 +14,13 @@
                 <a class="nav-link" href="/news/">Новости</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/newscategoryes/">Категории новостей</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/about/">О проекте</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/login/">Вход</a>
             </li>
         </ul>
 
