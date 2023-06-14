@@ -1,4 +1,4 @@
-@extends('_layout')
+@extends('layouts.public')
 @section('content')
     <form class="form-horizontal" id="login_form" method="POST" action="/login/auth/" role="form">
         <h1 class="main_subhead ">

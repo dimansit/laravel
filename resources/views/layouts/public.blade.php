@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Moderna - Bootstrap 3 flat corporate template</title>
+    <title>@section('title') :: Laravel проект @show</title>
     <meta name="description" content=""/>
     @include('styles')
 </head>

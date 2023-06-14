@@ -11,19 +11,36 @@
 |
 */
 
-use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
-use App\Http\Controllers\Admin\NewsController as AdminNewsController;
+
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GreetingController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
+use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 use App\Http\Controllers\NewsController as PublicNewsController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-    Route::resource('categories', AdminCategoryController::class);
-    Route::resource('news', AdminNewsController::class);
-});
+
+Route::get('/admin/',
+    [
+        AdminNewsController::class, 'index'
+    ]
+)->name('admin.index');;
+
+Route::get('/admin/news',
+    [
+        AdminNewsController::class, 'newsList'
+    ]
+)->name('admin.news.news');
+
+Route::get('/admin/categories',
+    [
+        AdminCategoryController::class, 'index'
+    ]
+)->name('admin.categories.categories');;
+
+
 
 Route::get('/',
     [
@@ -44,13 +61,13 @@ Route::get('/news/category/{category}',
     ]
 )
     ->where('category', '\d+')
-    ->name('news');
+    ->name('news.category');
 
 Route::get('/newscategoryes',
     [
         CategoryController::class, 'index'
     ]
-);
+)->name('newscategoryes');
 
 Route::get('/news/{id}',
     [
@@ -65,6 +82,7 @@ Route::get('/login',
         LoginController::class, 'index'
     ]
 )->name('login');
+
 
 Route::get('/{page}', function ($page) {
     return view($page);

@@ -1,4 +1,5 @@
-@extends('_layout')
+@extends('layouts.public')
+@section('title') Приветствие! @parent  @stop
 @section('content')
     <h1>Приветствую Вас на данном проекте!</h1>
     <div>

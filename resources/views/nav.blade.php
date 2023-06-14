@@ -11,16 +11,16 @@
                 <a class="nav-link" href="/">Главная</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/news/">Новости</a>
+                <a class="nav-link" href="{{ route('news') }}">Новости</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/newscategoryes/">Категории новостей</a>
+                <a class="nav-link" href="{{ route('newscategoryes') }}">Категории новостей</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about/">О проекте</a>
+                <a class="nav-link" href="/about">О проекте</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/login/">Вход</a>
+                <a class="nav-link" href="{{ route('login') }}">Вход</a>
             </li>
         </ul>
 
